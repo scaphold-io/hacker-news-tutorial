@@ -28,21 +28,6 @@ export default Relay.createContainer(Home, {
     orderBy: null
   },
   fragments: {
-    // user: (variables) => {
-    //   return Relay.QL`
-    //     fragment on UserQuerySet {
-    //       get (id: $input) {
-    //         id,
-    //         credentials {
-    //           basic {
-    //             email
-    //           }
-    //         },
-    //         createdAt
-    //       }
-    //     }
-    //   `
-    // },
     allHackerNewsItems: (variables) => {
       return Relay.QL `
         fragment on Viewer {
@@ -57,33 +42,13 @@ export default Relay.createContainer(Home, {
                 url,
                 author {
                   id,
-                  credentials {
-                    basic {
-                      email,
-                      password
-                    }
-                  }
+                  username
                 }
               }
             }
           }
         }
       `
-    },
-    // hnItems: (variables) => Relay.QL`
-    //   fragment on HackerNewsItemQuerySet {
-    //     get (id: $hnInput) {
-    //       id,
-    //       createdAt,
-    //       modifiedAt,
-    //       title,
-    //       score,
-    //       url,
-    //       author {
-    //         id
-    //       }
-    //     }
-    //   }
-    // `,
+    }
   }
 });
