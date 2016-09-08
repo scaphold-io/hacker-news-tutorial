@@ -1,7 +1,6 @@
 import path from 'path';
 import webpack from 'webpack';
 import WebpackDevServer from 'webpack-dev-server';
-import {Schema} from './data/schema';
 import express from 'express';
 import config from './config';
 
