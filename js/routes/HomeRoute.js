@@ -16,6 +16,6 @@ export const HomeQueries = {
 export function prepareHomeParams(params, {}) {
 	return {
 	    ...params,
-		orderBy: "-createdAt"
+		orderBy: {field: "createdAt", direction: "ASC" }
 	};
 }

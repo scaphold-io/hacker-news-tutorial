@@ -12,8 +12,6 @@ class HackerNewsItem extends React.Component {
       mailto = "mailto:" + item.author.username;
       email = item.author.username;
     }
-    mailto = "mailto:support@scaphold.io";
-    email = "support@scaphold.io";
 
     return (
       <div>
