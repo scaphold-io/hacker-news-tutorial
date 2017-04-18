@@ -15,6 +15,9 @@ var compiler = webpack({
         exclude: /node_modules/,
         loader: 'babel',
         test: /\.js$/,
+        query: {
+          plugins: [path.join(__dirname, 'plugins/babelRelayPlugin')]
+        }
       }
     ]
   },
